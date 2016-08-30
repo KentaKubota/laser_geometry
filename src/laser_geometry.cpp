@@ -111,7 +111,8 @@ namespace laser_geometry
       {
         cloud_out.points[count].x = output(0,index);
         cloud_out.points[count].y = output(1,index);
-        cloud_out.points[count].z = 0.0;
+        cloud_out.points[count].z = 0.5 - scan_in.ranges[index] * sin(17 * 3.14159 / 180);
+        //cloud_out.points[count].z = 0.0;
 
         //double x = cloud_out.points[count].x;
         //double y = cloud_out.points[count].y;
